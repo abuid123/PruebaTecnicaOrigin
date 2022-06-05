@@ -1,0 +1,47 @@
+.boton{
+    width:50px;
+    height:50px;
+    font-size:30px;
+    color:#000;
+}
+
+label{
+    font-weight: bold;
+    font-size: 30px;
+    padding-right: 10px;
+}
+
+input:not(.visor){
+    cursor: pointer;
+}
+
+button{
+    background-color: aquamarine;
+    border: none;
+    margin: 10px;
+    padding: 15px;
+    border-radius: 10%;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+.pad-numerico{
+    /*margin-top: 20px;
+    margin-bottom: 10px;
+    margin-left: 100px;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(77, 77, 77);
+    flex-direction: column;
+}

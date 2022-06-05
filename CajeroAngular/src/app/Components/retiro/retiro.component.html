@@ -1,0 +1,34 @@
+<div class="container">
+    <form>
+        <label for="">Dinero a retirar:</label>
+        <input type="text" placeholder="Ingrese el numero a retirar" [value]="dineroRetirar" (input)="dineroRetirar=$any($event.target).value" class="visor" disabled/>
+        <button (click)="retirarDinero($event)" >Aceptar</button>
+        <button (click)="limpiar()" >Limpiar</button>
+        <a routerLink="">Salir</a>
+        <a routerLink="/resultado/{{numeroTarjeta}}/{{dineroRetirar}}" style="display:none" id="irResultado"></a>
+    </form>
+
+    <form name="pad-numerico">
+        <table>
+            <tbody>
+                <tr>
+                    <td>  <input value=" 7 " (click)="number(7)" type="button" class="boton"></td>
+                    <td>  <input value=" 8 " (click)="number(8)" type="button" class="boton"></td>
+                    <td>  <input value=" 9 " (click)="number(9)" type="button" class="boton"></td>
+                </tr>
+                <tr>
+                    <td>  <input value=" 4 " (click)="number(4)" type="button" class="boton"></td>
+                    <td>  <input value=" 5 " (click)="number(5)" type="button" class="boton"></td>
+                    <td>  <input value=" 6 " (click)="number(6)" type="button" class="boton"></td>
+                </tr>
+                <tr>
+                    <td>  <input value=" 1 " (click)="number(1)" type="button" class="boton"></td>
+                    <td>  <input value=" 2 " (click)="number(2)" type="button" class="boton"></td>
+                    <td>  <input value=" 3 " (click)="number(3)" type="button" class="boton"></td>
+                </tr>
+                <td></td>
+                <td><input value=" 0 " (click)="number(0)" type="button" class="boton"></td>
+            </tbody>
+        </table>
+    </form>
+</div>

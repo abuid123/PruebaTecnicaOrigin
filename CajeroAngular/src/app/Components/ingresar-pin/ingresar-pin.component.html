@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="container-pad">
+        <label>Pin tarjeta:</label>
+        <input type="text" placeholder="4 digitos" [value]="pinTarjeta" disabled (input)="pinTarjeta=$any($event.target).value" class="visor">
+        <form class="pad-numerico">
+            <table>
+                <tbody>
+                    <tr>
+                        <td>  <input value=" 7 " (click)="number(7)" type="button" class="boton"></td>
+                        <td>  <input value=" 8 " (click)="number(8)" type="button" class="boton"></td>
+                        <td>  <input value=" 9 " (click)="number(9)" type="button" class="boton"></td>
+                    </tr>
+                    <tr>
+                        <td>  <input value=" 4 " (click)="number(4)" type="button" class="boton"></td>
+                        <td>  <input value=" 5 " (click)="number(5)" type="button" class="boton"></td>
+                        <td>  <input value=" 6 " (click)="number(6)" type="button" class="boton"></td>
+                    </tr>
+                    <tr>
+                        <td>  <input value=" 1 " (click)="number(1)" type="button" class="boton"></td>
+                        <td>  <input value=" 2 " (click)="number(2)" type="button" class="boton"></td>
+                        <td>  <input value=" 3 " (click)="number(3)" type="button" class="boton"></td>
+                    </tr>
+                    <td></td>
+                    <td><input value=" 0 " (click)="number(0)" type="button" class="boton"></td>
+                </tbody>
+            </table>
+        </form>
+    </div>
+    <div class="container-botones">
+        <button (click)="verificarNumero($event)" >Aceptar</button>
+        <button (click)="limpiar()" >Limpiar</button>
+        <button (click)="salir()">Salir</button>
+    </div>
+    <a routerLink="" hidden id="salir"></a>
+    <a routerLink="/operaciones/{{numeroTarjeta}}" id="enviarAOperaciones" hidden></a>
+    <a routerLink="/tarjeta-bloqueada" id="enviarABloqueada" hidden></a>
+</div>

@@ -1,0 +1,10 @@
+<div class="container">
+    <form action="">
+        <label for="numero">Numero Tarjeta: {{tarjeta.numeroTarjeta}}</label><br>
+        <label for="fecha">Fecha Vencimiento: {{tarjeta.fechaVencimiento}}</label><br>
+        <label for="balance">Balance: ${{tarjeta.balance}}</label><br>
+        <label for="codigoOperacion">Codigo Operacion: 1</label>
+    </form>
+    <a routerLink="">Salir</a>
+    <a routerLink="/operaciones/{{tarjeta.numeroTarjeta}}">Atras</a>
+</div>
